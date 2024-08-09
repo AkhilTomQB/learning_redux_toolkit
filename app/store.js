@@ -6,6 +6,6 @@ const cakeReducer = require("../features/cake/cakeSlice");
 const iceCreamReducer = require("../features/iceCream/iceCreamSlice");
 const store = configStore({
   reducer: { cake: cakeReducer, iceCream: iceCreamReducer },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 });
 module.exports = store;
