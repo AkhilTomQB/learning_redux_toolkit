@@ -13,7 +13,12 @@ const iceCreamSlice= createSlice({
         restocked:(state,action)=>{
             state.numOfIceCreams+action.payload
         }
-    }
+    },
+    extraReducers:builder => {
+        builder.addCase("cake/ordered", (state, action) => {
+            state.numOfIceCreams--
+        })
+      }
 })
 
 module.exports=iceCreamSlice.reducer
