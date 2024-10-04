@@ -11,7 +11,7 @@ const iceCreamSlice= createSlice({
             state.numOfIceCreams--
         },
         restocked:(state,action)=>{
-            state.numOfIceCreams+action.payload
+            state.numOfIceCreams+=action.payload
         }
     }
 })
